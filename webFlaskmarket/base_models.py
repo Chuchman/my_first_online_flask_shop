@@ -24,6 +24,5 @@ class F_back(db.Model):
     email_adress = db.Column(db.String(length=50),nullable=False, unique=True)
     message = db.Column(db.String(length=300),nullable=False, unique=True)
 
-
     def __repr__(self):
         return f'Item{self.name}'

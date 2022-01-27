@@ -10,7 +10,7 @@ Register Page
     <div class="container">
         <form method='POST' class="form-register" style="color:white">
             {{form.hidden_tag()}}
-            <img src="..." class="img-fluid" alt="Responsive image">
+            <img src="{{url_for('static', filename='pexels-daniela-constantini-5591748.jpg')}}" width="85" height="85" class="img-fluid" alt="Responsive image">
             <h1> Please, Create your Account!</h1>
             <br>
             {{ form.username.label()}}

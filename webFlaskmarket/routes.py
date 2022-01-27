@@ -37,13 +37,15 @@ def register_page():
 
 @app.route("/feedback", methods=['GET', 'POST'])
 def feedback_page():
-    form = FeedbackForm(request.form)
-    if request.method == 'POST' and form.validate_on_submit():
+    form = FeedbackForm()
+    print(form.validate_on_submit())
+    print(form.errors)
+    if form.validate_on_submit():
         F_back_to_create = F_back(username=form.username.data,
                                 email_adress=form.email_adress.data,
                                 message=form.message.data)
         db.session.add(F_back_to_create)
-        '''db.session.commit()'''
+        db.session.commit()
         return redirect(url_for('market_page'))
 
     return render_template("feedback.html", form=form)
