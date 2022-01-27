@@ -9,13 +9,15 @@ Register Page
 <body class="text-center">
     <div class="container">
         <form method='POST' class="form-register" style="color:white">
+            {{form.hidden_tag()}}
+            <img src="..." class="img-fluid" alt="Responsive image">
             <h1> Please, Create your Account!</h1>
             <br>
             {{ form.username.label()}}
             {{ form.username(class="form-control", placeholder="User Name")}}
 
-            {{ form.email_adress.label()}}
-            {{ form.email_adress(class="form-control", placeholder="Email Adress")}}
+            {{ form.email_address.label()}}
+            {{ form.email_address(class="form-control", placeholder="Email Adress")}}
 
             {{ form.password1.label()}}
             {{ form.password1(class="form-control", placeholder="Password: ")}}
@@ -28,9 +30,6 @@ Register Page
 
         </form>
     </div>
-
-
-
 </body>
 {% endblock %}
 

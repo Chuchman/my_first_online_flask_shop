@@ -1,0 +1,30 @@
+{% extends 'base.html'%}
+
+
+{% block title%}
+   Our  Feedback page
+{% endblock %}
+
+
+{% block content %}
+    <body class="text-center">
+        <div class="container">
+            <form method='POST' class="form-register" style="color:white">
+                <h1>Please, send us a message</h1>
+                <h2> We will contact you soon</h2>
+                <br>
+                {{form.username.label()}}
+                {{form.username(class="form-control", placeholder="Your name:")}}
+
+                {{form.email_adress.label()}}
+                {{form.email_adress(class="form-control", placeholder="Your Email:")}}
+
+                {{form.message.label()}}
+                {{form.message(class="form-control", placeholder="Your Order:")}}
+
+                <br>
+                {{ form.submit(class="btn btn-lg btn-block btn-primary")}}
+            </form>
+        </div>
+    </body>
+{% endblock %}

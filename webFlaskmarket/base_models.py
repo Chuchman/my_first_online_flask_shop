@@ -17,5 +17,13 @@ class Item(db.Model):
     description = db.Column(db.String(length=1024),nullable=False, unique=True)
     owener = db.Column(db.Integer(), db.ForeignKey('user.id'))
 
+
+class F_back(db.Model):
+    id = db.Column(db.Integer(), primary_key=True)
+    username = db.Column(db.String(length=30),nullable=False, unique=True)
+    email_adress = db.Column(db.String(length=50),nullable=False, unique=True)
+    message = db.Column(db.String(length=300),nullable=False, unique=True)
+
+
     def __repr__(self):
         return f'Item{self.name}'

@@ -9,4 +9,4 @@ app.config['SECRET_KEY'] = '8759bcc0393cbd49058cd644'
 db=SQLAlchemy(app)
 
 from .base_models import Item
-from webFlaskmarket import routs
+from webFlaskmarket import routes
